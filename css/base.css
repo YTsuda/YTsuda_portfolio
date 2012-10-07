@@ -1,0 +1,74 @@
+/* variables */
+/* css */
+/* line 5, ../sass/base.scss */
+html body {
+  background-color: #000100;
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+/* line 9, ../sass/base.scss */
+#content {
+  width: 800px;
+  margin: 0px auto;
+  padding: 1px 0px;
+}
+
+/* line 14, ../sass/base.scss */
+#bg {
+  width: 1318px;
+  height: 914px;
+  margin-top: -143px;
+  margin-left: -263px;
+  background-image: url("../img/back.jpg");
+  background-repeat: repeat-x;
+  position: absolute;
+  z-index: 0;
+}
+
+/* line 24, ../sass/base.scss */
+header {
+  z-index: 8;
+  margin: 45px 0px 0px 40px;
+  color: white;
+}
+/* line 28, ../sass/base.scss */
+header h1 a {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: white;
+  text-decoration: none;
+}
+/* line 36, ../sass/base.scss */
+header nav ul {
+  margin-left: 5px;
+}
+/* line 40, ../sass/base.scss */
+header nav ul li {
+  margin-top: 5px;
+  font-size: 16px;
+}
+/* line 44, ../sass/base.scss */
+header nav ul li.menu-1 {
+  margin-left: 32px;
+}
+/* line 44, ../sass/base.scss */
+header nav ul li.menu-2 {
+  margin-left: 64px;
+}
+/* line 44, ../sass/base.scss */
+header nav ul li.menu-3 {
+  margin-left: 96px;
+}
+/* line 48, ../sass/base.scss */
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.3em;
+  display: block;
+  width: 200px;
+}
+/* line 54, ../sass/base.scss */
+header nav ul li a:hover {
+  background-color: rgba(94, 204, 219, 0.75);
+}
