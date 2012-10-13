@@ -1,30 +1,50 @@
+@import "compass/utilities/general/clearfix";
+
 /* variables */
 $menucolor: #FFFFFF;
+$margin_top: 45px;
+$menu_font: 'arial', sans-serif;
+$height: 785px;
 
-/* css */
+/* general */
+a{
+    color:#000E11;
+}
+
+/* content */
 html body{
     background-color: #000100;
     font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    height: $height;
 }
 #content{
-    width: 800px;
+    width: 830px;
     margin: 0px auto;
-    padding: 1px 0px;
+    padding: 0px 0px;
 }
 #bg{
-    width: 1318px;
-    height: 914px;
-    margin-top: -143px;
-    margin-left: -263px;
+    width: 1300px;
+    height: 835px;
+    margin-top: -50px;
+    margin-left: -233px;
     background-image: url('../img/back.jpg');
-    background-repeat: repeat-x;
     position: absolute;
+    clear: both;
     z-index: 0;
+    html.ie7 &{
+        margin-left: -568px;
+    }
 }
 header{
+    float: left;
+    width: 300px;
     z-index: 8;
-    margin:45px 0px 0px 40px;
+    margin-left: 35px;
+    margin-top: $margin_top;
     color: $menucolor;
+    font-family: $menu_font;
     h1 a{
         font-size:30px;
         font-weight: bold;
@@ -34,27 +54,103 @@ header{
     }
 
     nav ul{
-        margin-left: 5px;
+        margin-top: 10px;
+        margin-left: 0px;
     }
     
     nav ul li{
-        margin-top: 5px;
+        margin-top: 6px;
         font-size: 16px;
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
             &.menu-#{$i}{
-                margin-left: 32px * $i;
+                margin-left: 28px * $i;
             }
         }
         a{
+            display: block;
+            width:150px;
+            padding-left: 5px;
             color: $menucolor;
             text-decoration: none;
             letter-spacing: 0.3em;
-            display: block;
-            width:200px;
             &:hover{
                 background-color: rgba(94,204,219,0.75);
             }
         }
+        &.menu-3 a, &.menu-1 a{
+            letter-spacing: 0.25em;
+        }
     }
 }
+article{
+    float:right;
+    height: $height;
+    width: 480px;
+    margin-right: 10px;
+    background-image: url("../img/articleback.png");
 
+    #artcle-inner{
+        margin-top: $margin_top + 8px;
+        color: #FFFFFF;
+    }
+    h2{
+        float: left;
+        padding: 3px 10px;
+        font-size: 15px;
+        letter-spacing: 0.15em;
+        font-family: $menu_font;
+        color: #E6E6E6;
+        font-weight: normal;
+        background-color:#010101;
+    }
+    .title{
+        @include clearfix;
+    }
+    .text{
+        margin-top: 20px;
+        padding: 0px 30px;
+        color: #010101;
+        p{
+
+        }
+        h3{
+            margin-top: 25px;
+            font-weight: normal;
+        }
+    }
+
+}
+
+footer{
+    clear: both;
+    color: #FFFFFF;
+}
+
+
+//profile page
+body.profile article{
+    h3.name{
+        font-size: 22px;
+        letter-spacing: 0.1em;
+        font-weight: normal;
+        line-height: 120%;
+    }
+    div.ruby{
+        font-size: 12px;
+    }
+    dl.career{
+        margin-top: 12px;
+        font-size: 14px;
+        dt{
+            float:left;
+            margin-bottom: 9px;
+            padding-right: 8px;
+            width: 52px;
+            text-align: right;
+            font-weight: bold;
+        }
+        dd{
+            margin-bottom: 9px;
+        }
+    }
+}

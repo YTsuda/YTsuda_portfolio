@@ -1,37 +1,54 @@
 /* variables */
-/* css */
-/* line 5, ../sass/base.scss */
+/* general */
+/* line 10, ../sass/base.scss */
+a {
+  color: #000E11;
+}
+
+/* content */
+/* line 15, ../sass/base.scss */
 html body {
   background-color: #000100;
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 785px;
 }
 
-/* line 9, ../sass/base.scss */
+/* line 22, ../sass/base.scss */
 #content {
-  width: 800px;
+  width: 830px;
   margin: 0px auto;
-  padding: 1px 0px;
+  padding: 0px 0px;
 }
 
-/* line 14, ../sass/base.scss */
+/* line 27, ../sass/base.scss */
 #bg {
-  width: 1318px;
-  height: 914px;
-  margin-top: -143px;
-  margin-left: -263px;
+  width: 1300px;
+  height: 835px;
+  margin-top: -50px;
+  margin-left: -233px;
   background-image: url("../img/back.jpg");
-  background-repeat: repeat-x;
   position: absolute;
+  clear: both;
   z-index: 0;
 }
-
-/* line 24, ../sass/base.scss */
-header {
-  z-index: 8;
-  margin: 45px 0px 0px 40px;
-  color: white;
+/* line 36, ../sass/base.scss */
+html.ie7 #bg {
+  margin-left: -568px;
 }
-/* line 28, ../sass/base.scss */
+
+/* line 40, ../sass/base.scss */
+header {
+  float: left;
+  width: 300px;
+  z-index: 8;
+  margin-left: 35px;
+  margin-top: 45px;
+  color: white;
+  font-family: "arial", sans-serif;
+}
+/* line 48, ../sass/base.scss */
 header h1 a {
   font-size: 30px;
   font-weight: bold;
@@ -39,36 +56,123 @@ header h1 a {
   color: white;
   text-decoration: none;
 }
-/* line 36, ../sass/base.scss */
+/* line 56, ../sass/base.scss */
 header nav ul {
-  margin-left: 5px;
+  margin-top: 10px;
+  margin-left: 0px;
 }
-/* line 40, ../sass/base.scss */
+/* line 61, ../sass/base.scss */
 header nav ul li {
-  margin-top: 5px;
+  margin-top: 6px;
   font-size: 16px;
 }
-/* line 44, ../sass/base.scss */
+/* line 65, ../sass/base.scss */
 header nav ul li.menu-1 {
-  margin-left: 32px;
+  margin-left: 28px;
 }
-/* line 44, ../sass/base.scss */
+/* line 65, ../sass/base.scss */
 header nav ul li.menu-2 {
-  margin-left: 64px;
+  margin-left: 56px;
 }
-/* line 44, ../sass/base.scss */
+/* line 65, ../sass/base.scss */
 header nav ul li.menu-3 {
-  margin-left: 96px;
+  margin-left: 84px;
 }
-/* line 48, ../sass/base.scss */
+/* line 65, ../sass/base.scss */
+header nav ul li.menu-4 {
+  margin-left: 112px;
+}
+/* line 69, ../sass/base.scss */
 header nav ul li a {
+  display: block;
+  width: 150px;
+  padding-left: 5px;
   color: white;
   text-decoration: none;
   letter-spacing: 0.3em;
-  display: block;
-  width: 200px;
 }
-/* line 54, ../sass/base.scss */
+/* line 76, ../sass/base.scss */
 header nav ul li a:hover {
   background-color: rgba(94, 204, 219, 0.75);
+}
+/* line 80, ../sass/base.scss */
+header nav ul li.menu-3 a, header nav ul li.menu-1 a {
+  letter-spacing: 0.25em;
+}
+
+/* line 85, ../sass/base.scss */
+article {
+  float: right;
+  height: 785px;
+  width: 480px;
+  margin-right: 10px;
+  background-image: url("../img/articleback.png");
+}
+/* line 92, ../sass/base.scss */
+article #artcle-inner {
+  margin-top: 53px;
+  color: #FFFFFF;
+}
+/* line 96, ../sass/base.scss */
+article h2 {
+  float: left;
+  padding: 3px 10px;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  font-family: "arial", sans-serif;
+  color: #E6E6E6;
+  font-weight: normal;
+  background-color: #010101;
+}
+/* line 106, ../sass/base.scss */
+article .title {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 109, ../sass/base.scss */
+article .text {
+  margin-top: 20px;
+  padding: 0px 30px;
+  color: #010101;
+}
+/* line 116, ../sass/base.scss */
+article .text h3 {
+  margin-top: 25px;
+  font-weight: normal;
+}
+
+/* line 124, ../sass/base.scss */
+footer {
+  clear: both;
+  color: #FFFFFF;
+}
+
+/* line 132, ../sass/base.scss */
+body.profile article h3.name {
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  line-height: 120%;
+}
+/* line 138, ../sass/base.scss */
+body.profile article div.ruby {
+  font-size: 12px;
+}
+/* line 141, ../sass/base.scss */
+body.profile article dl.career {
+  margin-top: 12px;
+  font-size: 14px;
+}
+/* line 144, ../sass/base.scss */
+body.profile article dl.career dt {
+  float: left;
+  margin-bottom: 9px;
+  padding-right: 8px;
+  width: 52px;
+  text-align: right;
+  font-weight: bold;
+}
+/* line 152, ../sass/base.scss */
+body.profile article dl.career dd {
+  margin-bottom: 9px;
 }
