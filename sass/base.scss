@@ -2,18 +2,26 @@
 
 /* variables */
 $menucolor: #FFFFFF;
+$header_back: #000100;
 $margin_top: 45px;
 $menu_font: 'arial', sans-serif;
 $height: 785px;
 
 /* general */
 a{
-    color:#000E11;
+    color: $header_back;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.clear{
+    clear: both;
 }
 
 /* content */
 html body{
-    background-color: #000100;
+    background-color: $header_back;
     font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
     overflow-x:hidden;
     overflow-y:hidden;
@@ -48,7 +56,7 @@ header{
     h1 a{
         font-size:30px;
         font-weight: bold;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.1em;
         color: $menucolor;
         text-decoration: none;
     }
@@ -82,45 +90,104 @@ header{
         }
     }
 }
-article{
+
+//main-space
+div#main-space{
     float:right;
     height: $height;
     width: 480px;
     margin-right: 10px;
     background-image: url("../img/articleback.png");
+    color: $header_back;
 
-    #artcle-inner{
+    #main-inner{
         margin-top: $margin_top + 8px;
-        color: #FFFFFF;
-    }
-    h2{
-        float: left;
-        padding: 3px 10px;
-        font-size: 15px;
-        letter-spacing: 0.15em;
-        font-family: $menu_font;
-        color: #E6E6E6;
-        font-weight: normal;
-        background-color:#010101;
     }
     .title{
         @include clearfix;
-    }
-    .text{
-        margin-top: 20px;
-        padding: 0px 30px;
-        color: #010101;
-        p{
-
-        }
-        h3{
-            margin-top: 25px;
+        .page-title{
+            display: block;
+            float: left;
+            padding: 1px 10px 3px;
+            font-size: 15px;
+            letter-spacing: 0.15em;
+            font-family: $menu_font;
+            color: #E6E6E6;
             font-weight: normal;
+            background-color: $header_back;
+            border:solid $header_back;
+            border-width: 1px 1px 1px 0px;
+            &.year{
+                padding: 3px 10px 2px;
+                font-size: 14px;
+                border-left: 1px solid #666666;
+                letter-spacing: 0.1em;
+            }
+        }
+        a.page-title:hover{
+            text-decoration: none;
+            background-color: #333333;
+        }
+        .post-title{
+            float: left;
+            float: left;
+            font-size: 13px;
+            padding: 1px 7px 0px 14px;
+            border:solid #010101;
+            border-width: 1px 1px 1px 0px;
+            background-color: #FFFFFF;
+            background-image: url('../img/arrow.png');
+            background-repeat: no-repeat;
         }
     }
+    .main-content{
+        height: 669px;
+        margin-top:20px;
+        padding: 0px 10px 0px 30px;
+        .main-content-inner{
+            overflow-y: scroll;
+            height: 669px;
+            padding-bottom: 190px;
+        }
+    }
+    ul.menu{
+        li a{
+            display: block;
+            font-family: $menu_font;
+            float: left;
+            font-size: 14px;
+            padding: 3px 7px 2px;
+            border:solid #010101;
+            border-width: 1px 1px 1px 0px;
+            background-color: #FFFFFF;
+            cursor:pointer;
 
+            &:hover, &.selected{
+                border-bottom-width: 3px;
+                padding-top: 2px;
+                padding-bottom: 1px;
+            }
+            &:hover{
+                text-decoration: none;
+                color: #888888;
+            }
+        }
+    }
 }
 
+//page
+body.page article .text{
+    margin-top: 20px;
+    padding: 0px 30px;
+    color: #010101;
+
+    h3{
+        margin-top: 25px;
+        font-weight: normal;
+    }
+}
+
+//footer
 footer{
     clear: both;
     color: #FFFFFF;
@@ -151,6 +218,117 @@ body.profile article{
         }
         dd{
             margin-bottom: 9px;
+        }
+    }
+}
+
+
+//works
+body.post-type-archive-work ol.archives{
+    li.year{
+        border-bottom: 1px solid $header_back;
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    article{
+        margin-bottom: 25px;
+        @include clearfix;
+
+        div.thumb{
+            float:left;
+        }
+        div.data{
+            float:left;
+            padding-left: 13px;
+            width: 265px;
+
+            h2{
+                font-size: 16px;
+                line-height: 100%;
+                a{
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            div.url{
+                margin: 5px 0 4px 0;
+                line-height: 120%;
+                font-size: 10px;
+                a{
+                    color: #888888;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            dl.work-params{
+                float: left;
+                margin-top: 3px;
+                &.part{ margin-top: 3px; }
+                font-size: 12px;
+                line-height: 120%;
+                dt{
+                    color: #333333;
+                    float: left;
+                    font-weight: bold;
+                    padding: 0 3px 1px 0;
+                    margin: 0px 4px 3px 0px;
+                }
+                dd{
+                    float: left;
+                    border-right: 1px solid #BBBBBB;
+                    padding: 0px 4px 0px 0px;
+                    margin: 0px 4px 1px 0px;
+                    & a{
+                        color: #444444;
+                    }
+                    &:last-child{
+                        border-right: none;
+                        margin-bottom: 3px;
+                    }
+                }
+
+                &.member{
+                    margin-left: 10px;
+                }
+                &.env, &.part{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+body.single-work div#main-space .main-content{
+    padding-right: 30px;
+    h1{
+        font-size: 20px;
+        font-weight: normal;
+    }
+    table.work_param_table{
+        width: 100%;
+        margin-top: 10px;
+        font-size: 13px;
+        border-collapse: collapse;
+        border: solid $header_back;
+        border-width: 2px 0px;
+        td,th{
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-bottom: 1px dotted #777;
+        }
+        th{
+            width: 14%;
+            text-align: right;
+            white-space: nowrap;
+        }
+        td{
+            padding-left: 10px;
         }
     }
 }
