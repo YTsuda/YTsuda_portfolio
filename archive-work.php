@@ -91,7 +91,6 @@ works_archives_script();
                         <dd><a href="/category/type/<?php echo $param->slug ?>"><?php echo $param->cat_name ?></a></dd>
                         <?php endforeach; ?>
                     </dl>
-                    <?php the_excerpt(); ?>
                 </div>
             </article>
         </li>

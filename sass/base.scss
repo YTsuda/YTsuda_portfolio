@@ -53,17 +53,21 @@ header{
     margin-top: $margin_top;
     color: $menucolor;
     font-family: $menu_font;
-    h1 a{
-        font-size:30px;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-        color: $menucolor;
-        text-decoration: none;
+    h1{
+         a{
+             display:block;
+             width: 147px;
+             height: 47px;
+             background-image: url('../img/title.png');
+             span{
+                display: none;
+             }
+        }
     }
 
     nav ul{
-        margin-top: 10px;
-        margin-left: 0px;
+        margin-top: 13px;
+        margin-left: 10px;
     }
     
     nav ul li{
@@ -185,6 +189,9 @@ body.page article .text{
         margin-top: 25px;
         font-weight: normal;
     }
+    a{
+        text-decoration: underline;
+    }
 }
 
 //footer
@@ -305,7 +312,9 @@ body.post-type-archive-work ol.archives{
 }
 
 body.single-work div#main-space .main-content{
-    padding-right: 30px;
+    article{
+        padding-right: 11px;
+    }
     h1{
         font-size: 20px;
         font-weight: normal;
@@ -321,6 +330,7 @@ body.single-work div#main-space .main-content{
             padding-top: 4px;
             padding-bottom: 4px;
             border-bottom: 1px dotted #777;
+            vertical-align: middle;
         }
         th{
             width: 14%;
@@ -329,6 +339,46 @@ body.single-work div#main-space .main-content{
         }
         td{
             padding-left: 10px;
+        }
+    }
+    div.text{
+        font-size: 14px;
+        margin-top: 25px;
+        div.image{
+            margin-bottom: 10px;
+            &.alignright{
+                float: right;
+                margin-left: 15px;
+            }
+            &.alignleft{
+                float: left;
+            }
+            img{
+                display: block;
+            }
+            span.cap{
+                font-size: 12px;
+                color: #888888;
+            }
+        }
+        h2{
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 140%;
+        }
+        ul{
+            margin-top: 15px;
+            li{
+                line-height: 130%;
+                list-style-type: disc;
+                list-style-position: outside;
+                margin-top: 3px;
+                margin-left: 20px;
+            }
+        }
+        a{
+            text-decoration: underline;
         }
     }
 }

@@ -1,5 +1,5 @@
 <header>
-    <h1><a href="/"><?php bloginfo( 'name' ); ?></a></h1>
+    <h1><a href="/"><span><?php bloginfo( 'name' ); ?></span></a></h1>
     <nav>
         <ul>
             <li class="menu-1"><a href="/profile">profile</a></li>

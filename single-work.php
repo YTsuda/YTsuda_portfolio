@@ -19,13 +19,14 @@
 works_single_script();
 get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<article><div id="artcle-inner">
+<div id="artcle-inner">
     <div class="title">
         <a class="page-title" href="/works">works</a>
         <a class="page-title year" href="/works/#<?php echo get_the_custom_value('year') ?>"><?php echo get_the_custom_value('year') ?></a>
         <div class="post-title"><?php the_title(); ?></div>
     </div>
     <div class="main-content"><div class="main-content-inner">
+        <article>
         <h1><?php the_title(); ?></h1>
         <table class="work_param_table">
             <?php
@@ -41,7 +42,7 @@ get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) )
             </tr>
             <tr>
                 <th>メンバー</th>
-                <td><?php echo get_the_custom_value('member') ?></td>
+                <td><?php echo get_the_custom_value('member') ?>人</td>
             </tr>
             <tr>
                 <th>環境</th>
@@ -53,8 +54,9 @@ get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) )
             </tr>
         </table>
         <div class="text"><?php the_content(); ?></div>
+        </article>
     </div></div>
-</div></article>
+</div>
 <?php endwhile; ?>
 
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
