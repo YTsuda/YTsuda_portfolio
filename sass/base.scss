@@ -155,10 +155,12 @@ div#main-space{
         }
     }
     ul.menu{
+        li{
+            float: left;
+        }
         li a{
             display: block;
             font-family: $menu_font;
-            float: left;
             font-size: 14px;
             padding: 3px 7px 2px;
             border:solid #010101;
