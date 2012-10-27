@@ -19,7 +19,6 @@
 works_single_script();
 get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<div id="artcle-inner">
     <div class="title">
         <a class="page-title" href="/works">works</a>
         <a class="page-title year" href="/works/#<?php echo get_the_custom_value('year') ?>"><?php echo get_the_custom_value('year') ?></a>
@@ -55,8 +54,8 @@ get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) )
         </table>
         <div class="text"><?php the_content(); ?></div>
         </article>
+        <a class="back" href="/works/#<?php echo get_the_custom_value('year') ?>">back</a>
     </div></div>
-</div>
 <?php endwhile; ?>
 
 <?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

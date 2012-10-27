@@ -20,22 +20,27 @@ a{
 }
 
 /* content */
+html{
+    height: 100%;
+}
 html body{
     background-color: $header_back;
     font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
     overflow-x:hidden;
     overflow-y:hidden;
-    height: $height;
+    height: 100%;
+    overflow:hidden;
 }
 #content{
     width: 830px;
+    height: 100%;
     margin: 0px auto;
     padding: 0px 0px;
 }
 #bg{
     width: 1300px;
-    height: 835px;
-    margin-top: -50px;
+    height: 100%;
+    margin-top: 0px;
     margin-left: -233px;
     background-image: url('../img/back.jpg');
     position: absolute;
@@ -98,14 +103,16 @@ header{
 //main-space
 div#main-space{
     float:right;
-    height: $height;
+    height: 100%;
     width: 480px;
     margin-right: 10px;
     background-image: url("../img/articleback.png");
     color: $header_back;
 
     #main-inner{
-        margin-top: $margin_top + 8px;
+        height: 100%;
+        overflow:hidden;
+        margin-top: $margin_top + 2px;
     }
     .title{
         @include clearfix;
@@ -145,22 +152,20 @@ div#main-space{
         }
     }
     .main-content{
-        height: 669px;
+        height: 100%;
         margin-top:20px;
         padding: 0px 10px 0px 30px;
         .main-content-inner{
+            height: 86%;
             overflow-y: scroll;
-            height: 669px;
-            padding-bottom: 190px;
+            padding-bottom: 30px;
         }
     }
     ul.menu{
-        li{
-            float: left;
-        }
         li a{
             display: block;
             font-family: $menu_font;
+            float: left;
             font-size: 14px;
             padding: 3px 7px 2px;
             border:solid #010101;
@@ -229,6 +234,21 @@ body.profile article{
             margin-bottom: 9px;
         }
     }
+}
+.main-content-inner a.back{
+    clear:both;
+    float:left;
+    display: block;
+    margin-top: 25px;
+    padding: 1px 10px 2px;
+    font-family: $menu_font;
+    font-size: 15px;
+    color: #E6E6E6;
+    font-weight: normal;
+    background-color: $header_back;
+    border:solid $header_back;
+    letter-spacing: 0.15em;
+    border-width: 1px 1px 1px 1px;
 }
 
 

@@ -11,7 +11,9 @@
              */
             initialize: function(){
                 this.menuElm = $('body.post-type-archive-work #main-space ul.menu');
-                var scroll = $('.main-content-inner').jScrollPane();
+                var scroll = $('.main-content-inner').jScrollPane({
+                    "autoReinitialise" : true
+                });
                 this.scrollApi = scroll.data('jsp');
 
                 this.menuElm.find('li a').bind('click', {'obj' : this}, this.menuClickListener);

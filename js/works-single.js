@@ -10,7 +10,9 @@
              * setup scrollbar
              */
             initialize: function(){
-                var scroll = $('.main-content-inner').jScrollPane();
+                var scroll = $('.main-content-inner').jScrollPane({
+                    "autoReinitialise" : true
+                });
                 this.scrollApi = scroll.data('jsp');
             }
         };
