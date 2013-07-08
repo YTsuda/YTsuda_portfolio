@@ -1,4 +1,3 @@
-airbug_wp_template
+WP Theme of YTsuda's portfolio
 ==================
 
-Wordpress theme for my portfilio site.
